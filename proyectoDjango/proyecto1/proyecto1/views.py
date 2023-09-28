@@ -1,6 +1,6 @@
 import datetime
 from django.http import HttpResponse
-
+from django.template import Template, Context
 
 
 def saludo(request):
@@ -12,8 +12,16 @@ def pruebahtml(request):
     return HttpResponse(prueba)
 
 
+def pruebaplantilla(request):
+    
+    doc_externo=open("C:/Users/GEMELOS/Documents/proyectos/proyectoDjango/proyecto1/proyecto1/plantillas/plantilla1.html")
+    plt=Template(doc_externo.read())
+    doc_externo.close()
+    ctx=Context()
+    documento=plt.render(ctx)
 
-
+    return HttpResponse(documento)
+   
 
 
 """

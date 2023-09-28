@@ -1,0 +1,4 @@
+init_py    
+settigs.py    contiene todas las configuraciones de django
+urls.py    se almacena todas las url de nuesta web
+wsgi.py    relativo al servidor web de nuestro proyecto

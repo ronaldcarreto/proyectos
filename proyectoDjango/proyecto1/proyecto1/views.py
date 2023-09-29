@@ -22,6 +22,27 @@ def pruebaplantilla(request):
 
     return HttpResponse(documento)
    
+def pruebaplantilla2(request):
+    
+    nombre="ronald"
+    apellido="carreto"
+    hora=datetime.datetime.now()
+
+    doc_externo=open("C:/Users/GEMELOS/Documents/proyectos/proyectoDjango/proyecto1/proyecto1/plantillas/plantilla2.html")
+    plt=Template(doc_externo.read())
+    doc_externo.close()
+    ctx=Context({"nombre_persona": nombre, "apellido_persona":apellido, "hora_actual":hora, "clases":["mate","fisica", "electronica"]})
+    #ctx=Context({"nombre_persona": "ronald", "apellido_persona":"carreto"})   *otra forma de colocarlo*
+    documento=plt.render(ctx)
+
+    return HttpResponse(documento)
+
+
+
+
+
+
+
 
 
 """

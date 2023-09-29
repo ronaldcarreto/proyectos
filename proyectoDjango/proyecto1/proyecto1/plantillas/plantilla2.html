@@ -5,13 +5,92 @@
         ESTA ES UN PRUEBA CON HTML
         </h1>
         <p>El nombre del profesor es: {{nombre_persona}}  {{apellido_persona}}</p>
+        <p>El nombre del profesor es: {{nombre_persona.upper}}  {{apellido_persona|upper}}</p>   <!-- .upper coloca todo en mayuscula se puede colocar (.) o (|)-->
+        <p>El nombre del profesor es: {{nombre_persona|lower}}  {{apellido_persona.lower}}</p>   <!-- .upper coloca todo en minuscula-->
+        
+
         <p>Hora y fecha actual: {{hora_actual}}</p>
         <p>Hora actual: {{hora_actual.time}}</p>
         <p>Fecha actual: {{hora_actual.day}} / {{hora_actual.month}} / {{hora_actual.year}}</p>
+        
+       
+        <hr style="color: rgb(96, 204, 28);">
+       <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+       
+        <!-- Esto es un comentario -->
+         <p>{{clases}}</p>  
+         <p>{{clases.0}}</p> 
+         <p>{{clases.2}}</p> 
 
-        <p>{{clases}}</p>
-        <p>{{clases.0}}</p>
-        <p>{{clases.2}}</p>
+         <!-- linea horizontal -->
+         <hr>
+      
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+         <!-- CICLOS FOR PARA LAS CLASES-->
+        <p>
+            {% for las_clases in clases %}
+                    {{las_clases}}
+            {% endfor %}
+        </p>    
+
+
+        <p>
+            {% for las_clases in clases %}
+                    <p>{{las_clases}} </p>
+            {% endfor %}
+        </p>
+        
+
+
+        <p>
+            {% for las_clases in clases %}
+            <li>{{las_clases}} </li>
+            {% endfor %}
+        </p> 
+
+        <p>
+            {% for las_clases in clases %}
+            <li>{{las_clases|first}} </li>     <!-- coloca solo la primera letra de la clase-->
+            {% endfor %}
+        </p> 
+
+
+        <p>
+            {% for las_clases in clases %}
+            <li>{{las_clases|first|upper}} </li>     <!-- coloca solo la primera letra de la clase-->
+            {% endfor %}
+        </p> 
+
+
+
+
+         <!-- comprobacion de clases vacias -->
+         <ul>
+            {% if clases2%}   <!-- condicion if,  va comprobar si hay informacion en la lista if-->
+                {% for las_clases in clases %}
+
+                     <li>{{las_clases}} </li>
+
+                {% endfor %}
+            {% else %}
+            <p> no hay clases que mostrar en clases2</p>    
+            {% endif %}
+         </ul> 
+
+
+         <!-- comprobacion con IF -->
+
+         <ul>
+            {% if nombre2 == 'eduardo' %}   <!-- condicion if,  va comprobar si hay informacion en la lista if-->
+                
+            <p> el curso lo imparte el profesor titular</p>
+            {% else %}
+            <p> El curso lo imparte el profesor suplente</p>    
+            {% endif %}
+         </ul>
+
+
 
     </body>
         </html>

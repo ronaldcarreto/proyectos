@@ -12,14 +12,62 @@
 
 <body>
 
-<h1>PILDORAS INFORMATICAS</h1>
-<h3>Cursos de programacion, ofimatica y diseño web</h3>
+  <!-- encabezado -->
+ 
+   <!-- encabezado prototipo 1
+  
+<h1 style="background-color: blue; color: blanchedalmond;text-align: center;">PILDORAS INFORMATICAS</h1>
+<h3>Cursos de programacion, ofimatica y diseño web</h3> -->
 
+   <!-- encabezado prototipo 2 -->
+<header style="background-color: #4285F4; color: #fff; text-align: center; padding: 20px;">
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h1 style="font-size: 28px; margin: 0; font-family: 'Arial', sans-serif; font-weight: bold;">PILDORAS INFORMATICAS</h1>
+        <p style="font-size: 16px; margin: 0; color: #ddd;">Cursos de programación, ofimática y diseño web</p>
+    </div>
+</header>
+
+{% include "superior/barra.html" %}
+
+
+
+ <!-- contenido cambiante -->
 {% block content%} {% endblock %}
 
 
 
-<p>Cursos gratuitos, gracias por su visita.</p>
+
+
+
+
+<br>
+<br>
+ <!-- PIE DE PAGINA  -->
+
+ <!-- prototipo encabazado 1 
+  
+<p style="background-color: rgb(36, 36, 121); color: rgb(150, 115, 62);text-align: center;">Cursos gratuitos, gracias por su visita.</p>
+
+prototipo encabazado 2 
+
+<footer style="background-color: #242479; color: #96733e; text-align: center; padding: 20px;">
+    <p style="font-size: 16px; margin: 0;">Explora nuestra selección de cursos gratuitos. ¡Gracias por visitarnos!</p>
+    <p style="font-size: 14px; margin: 0; margin-top: 10px;">&copy; 2023 Tu Empresa. Todos los derechos reservados.</p>
+</footer>        -->
+
+<!-- prototipo encabazado 3 profesional -->
+<footer style="background-color: #242479; color: #fff; text-align: center; padding: 30px;">
+    <div style="max-width: 800px; margin: 0 auto;">
+        <p style="font-size: 18px; margin: 0 0 10px;">Descubre nuestra selección de cursos gratuitos.</p>
+        <p style="font-size: 14px; margin: 0 0 20px;">Gracias por elegirnos. &copy; 2023 Tu Empresa. Todos los derechos reservados.</p>
+        <ul style="list-style: none; padding: 0; display: flex; justify-content: center;">
+            <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #fff; font-weight: bold;">Inicio</a></li>
+            <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #fff; font-weight: bold;">Cursos</a></li>
+            <li><a href="#" style="text-decoration: none; color: #fff; font-weight: bold;">Contacto</a></li>
+        </ul>
+    </div>
+</footer>
+
 
 </body>
 </html>

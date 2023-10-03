@@ -14,7 +14,7 @@ def pruebahtml(request):
 
 def pruebaplantilla(request):
     
-    doc_externo=open("C:/Users/Alejasndra/Documents/proyectos/proyectoDjango/proyecto1/proyecto1/plantillas/plantilla1.html")
+    doc_externo=open("C:/Users/Alejandra/Documents/proyectos/proyectoDjango/proyecto1/proyecto1/plantillas/plantilla1.html")
     plt=Template(doc_externo.read())
     doc_externo.close()
     ctx=Context()
@@ -33,7 +33,7 @@ def pruebaplantilla2(request):
 
 
 
-    doc_externo=open("C:/Users/Alejasndra/Documents/proyectos/proyectoDjango/proyecto1/proyecto1/plantillas/plantilla2.html")
+    doc_externo=open("C:/Users/Alejandra/Documents/proyectos/proyectoDjango/proyecto1/proyecto1/plantillas/plantilla2.html")
     plt=Template(doc_externo.read())
     doc_externo.close()
     ctx=Context({"nombre_persona": nombre, "apellido_persona":apellido, "hora_actual":hora, "clases":["mate","fisica", "electronica"]})

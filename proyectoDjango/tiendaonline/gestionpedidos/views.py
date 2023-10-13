@@ -16,12 +16,21 @@ def buscar(request):
     if request.GET["producto"]:
          
         articulo_bd = request.GET["producto"]
+
         articuloss = articulos.objects.filter(nombre__icontains=articulo_bd)
         
         return render(request,"resultadobusqueda.html", {"articulos":articuloss, "query":articulo_bd})
 
-
-    else:
-                mensaje= "no has introducido nada"
+    else:     
+        mensaje= "no has introducido nada"
 
     return HttpResponse(mensaje)
+
+
+
+def contacto(request):
+
+    if request.method=="POST":
+        return render(request, "gracias.html")
+        
+    return render(request, "contacto.html")

@@ -13,12 +13,12 @@ class carro:
 
     def agregar(self, curso):
         if(str(curso.id) not in self.carro.keys()):
-            self.carro[curso.id] {
+            self.carro[curso.id]={
                 "curso_id":curso.id,
                 "nombre":curso.nombre,
                 "precio":curso.cantidad,
                 "cantidad": 1, 
-                "imagen":curso.imagen.url
+                "imagen":curso.imagen.url,
             }
 
         else:

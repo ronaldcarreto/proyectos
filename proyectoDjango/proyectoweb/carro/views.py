@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .carro import carro
+from .carro import Carro
 from catalogo.models import curso
 from django.shortcuts import redirect
 
@@ -7,39 +7,30 @@ from django.shortcuts import redirect
 
 
 def agregar_producto(request, curso_id):
-    
-    carro=carro(request)
+        
+        carro = Carro(request)
 
-    curso=curso.objects.get(id=curso_id)
+        cursos= curso.objects.get(id=curso_id)
 
-    carro.agregar(curso=curso)   
-
-    return redirect("catalogo") 
+        carro.agregar(curso = cursos)  
+         
+        return redirect("catalogo") 
 
 
 def eliminar_producto(request, curso_id):
-    carro=carro(request)
+        carro=carro(request)
 
-    curso=curso.objects.get(id=curso_id)
+        curso=curso.objects.get(id= curso_id)
 
-    carro.eliminar(curso=curso)   
+        carro.eliminar(curso=curso)   
 
-    return redirect("catalogo") 
-
-
-def restar_producto(request, curso_id):
-    carro=carro(request)
-
-    curso=curso.objects.get(id=curso_id)
-
-    carro.restar_producto(curso=curso)   
-
-    return redirect("catalogo") 
+        return redirect("catalogo") 
 
 
-def limpiar_carro(request, curso_id):
-    carro=carro(request)
+def limpiar_carro(request, producto_id):
+    
+    carro = Carro(request)
 
-    carro.limpiar_carro() 
+    carro.limpiar_carro()
 
     return redirect("catalogo") 

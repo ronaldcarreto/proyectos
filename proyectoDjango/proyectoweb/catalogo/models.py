@@ -3,6 +3,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class curso(models.Model):
     nombre = models.CharField(max_length=30, null=False)
     categoria = models.CharField(max_length=30, null=False)

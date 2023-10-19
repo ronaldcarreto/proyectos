@@ -20,9 +20,9 @@ def agregar_producto(request, curso_id):
 def eliminar_producto(request, curso_id):
         carro=carro(request)
 
-        curso=curso.objects.get(id= curso_id)
+        cursos=curso.objects.get(id= curso_id)
 
-        carro.eliminar(curso=curso)   
+        carro.eliminar(curso=cursos)   
 
         return redirect("catalogo") 
 

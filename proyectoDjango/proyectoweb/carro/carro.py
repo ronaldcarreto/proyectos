@@ -18,8 +18,8 @@ class Carro:
                 "curso_id":curso.id,
                 "nombre":curso.nombre,
                 "cantidad": 1,
-                "precio":str(curso.precio)               
-                #"imagen": curso.imagen.url,                                   
+                "precio":str(curso.precio),               
+                "imagen": curso.imagen.url                                   
             }
         self.guardar_carro()     
 

@@ -62,7 +62,7 @@
                         </td>
                             <td>{{value.precio}}</td>
                             <td>{{value.precio}}</td>
-                        <td><a href="#" class="btn btn-black btn-sm">X</a></td>
+                            <td><a href="{% url 'Carro:eliminar' value.curso_id %}" class="btn btn-black btn-sm">X</a></td>
                     </tr>
 						  {% endfor %}
             {% else %} 

@@ -18,13 +18,14 @@ def agregar_producto(request, curso_id):
 
 
 def eliminar_producto(request, curso_id):
-        carro=carro(request)
+
+        carro = Carro(request)
 
         cursos=curso.objects.get(id= curso_id)
 
-        carro.eliminar(curso=cursos)   
+        carro.eliminar(curso = cursos)   
 
-        return redirect("catalogo") 
+        return redirect("cart") 
 
 
 def limpiar_carro(request, producto_id):
@@ -33,4 +34,4 @@ def limpiar_carro(request, producto_id):
 
     carro.limpiar_carro()
 
-    return redirect("catalogo") 
+    return redirect("cart") 

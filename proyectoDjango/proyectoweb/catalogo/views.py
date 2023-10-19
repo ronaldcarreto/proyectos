@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import curso
+from carro.carro import Carro
 
 
 # Create your views here.
@@ -13,5 +14,7 @@ def catalogo(request):
 
 
 def cart(request):
+
+   
 
     return render(request, "catalogo/cart.html")

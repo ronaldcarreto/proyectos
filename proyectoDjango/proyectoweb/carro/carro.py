@@ -31,7 +31,7 @@ class Carro:
         curso.id=str(curso.id)
         if curso.id in self.carro:
             del self.carro[curso.id]
-            self.guardar_carro()
+        self.guardar_carro()
 
     def limpiar_carro(self):
         self.session["carro"]={}

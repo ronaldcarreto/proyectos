@@ -26,7 +26,7 @@
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
 			<div class="container">
-				<a class="navbar-brand" href="index.html">ACADEMIA USAC<span>.</span></a>
+				<a class="navbar-brand" href="index.html">ElectroAcademy<span>.</span></a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -37,7 +37,7 @@
 						<li class="nav-item active">
 							<a class="nav-link" href="{% url 'home' %}">Home</a>
 						</li>
-						<li><a class="nav-link" href="{% url 'cursos' %}">Cursos</a></li>						
+						<!-- <li><a class="nav-link" href="{% url 'cursos' %}">Cursos</a></li>-->						
 						<li><a class="nav-link" href="{% url 'catalogo' %}">Catalogo</a></li>
 						<!-- <li><a class="nav-link" href="services.html">Iniciar sesión</a></li> -->
 						
@@ -45,13 +45,21 @@
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 						<li><a class="nav-link" href="#"><img src=" {% static 'images/user.svg' %} "></a></li>
-						<li><a class="nav-link" href="{% url 'cart' %}"><img src="{% static 'images/cart.svg' %}"></a></li>
+						
+									{% if user.is_authenticated %}
+									<li><a class="nav-link" href="{% url 'cart' %}"><img src="{% static 'images/cart.svg' %}"></a></li>
+									{% else %}
+									{% endif %}
+
+
 						<li><a class="nav-link" href="">
 							{% if user.is_authenticated %}	
 								Hola {{user.username}}
 								<li><a class="nav-link" href="{% url 'cerrar_sesion' %} ">Cerrar sesión</a></li>
 							{% else %}
-								<li><a class="nav-link" href="{% url 'logear' %} ">Iniciar sesión</a></li> 
+								
+								<li><a class="nav-link" href="{% url 'logear' %} ">Iniciar sesión  &nbsp; |</a></li>
+								<li><a class="nav-link" href="{% url 'logearP' %} ">Iniciar sesión profesor &nbsp; | </a></li>  
 								<li><a class="nav-link" href="{% url 'autenticacion' %}" >Registrate</a></li>
 							
 							{% endif %}
@@ -113,7 +121,7 @@
 
 				<div class="row g-5 mb-5">
 					<div class="col-lg-4">
-						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">ACADEMIA USAC<span>.</span></a></div>
+						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">ElectroAcademy<span>.</span></a></div>
 						<p class="mb-4">Donde el conocimiento se fusiona con la excelencia educativa. En el centro de nuestra misión está el compromiso de proporcionar una educación de calidad que inspire, motive y prepare a los estudiantes para sobresalir en su desarrollo académico y profesional en el campo de la electrónica.</p>
 
 						<ul class="list-unstyled custom-social">

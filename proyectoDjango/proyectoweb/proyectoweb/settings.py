@@ -15,9 +15,11 @@ import os
 
 from django.contrib.messages import constants  as mensajes_de_error
 
+from .jazzmin import JAZZMIN_SETTINGS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -35,6 +37,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,8 +48,10 @@ INSTALLED_APPS = [
     'catalogo',
     'carro',
     'autenticacion',
+    'pedidos',
     'crispy_forms',
     "crispy_bootstrap5",
+    
     
 ]
 
@@ -167,3 +172,16 @@ MESSAGE_TAGS={
     
 
 }
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'electroacademy5@gmail.com'
+EMAIL_HOST_PASSWORD = 'bidp mrkl mbus boim'
+EMAIL_SUBJECT_PREFIX = '[ejcm562000@gmail.com]'
+
+JAZZMIN_SETTINGS=JAZZMIN_SETTINGS
+
+

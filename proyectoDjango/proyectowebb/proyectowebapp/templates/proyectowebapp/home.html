@@ -1,0 +1,284 @@
+{% extends "proyectowebapp/base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+
+<!-- Start Hero Section
+
+{% static ''%}
+-->
+
+<div class="hero">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col-lg-5">
+				<div class="intro-excerpt">
+					<h1>ELECTRO<span clsas="d-block">ACADEMY</span></h1>
+					<p class="mb-4">En nuestra academia, ofrecemos una educación integral centrada en la electrónica. Desde fundamentos hasta aplicaciones avanzadas, nuestro programa abarca diversas áreas, preparando a los estudiantes para un futuro dinámico en electrónica.
+
+
+
+
+					</p>
+					<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+				</div>
+			</div>
+
+			
+			 <div class="col-lg-7">
+				<div class="hero-img-wrap">
+					 <img src="{% static 'images/logo.png'%}" class="img-fluid"> 
+				</div> 
+
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Hero Section -->
+
+		<!-- Start Why Choose Us Section
+		<div class="why-choose-section">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-lg-6">
+						<h2 class="section-title">Why Choose Us</h2>
+						<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+
+						<div class="row my-5">
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="{% static 'images/truck.svg'%}" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Fast &amp; Free Shipping</h3>
+									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="{% static 'images/bag.svg' %}" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Easy to Shop</h3>
+									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="{% static 'images/support.svg' %}" alt="Image" class="imf-fluid">
+									</div>
+									<h3>24/7 Support</h3>
+									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="{% static 'images/return.svg' %}" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Hassle Free Returns</h3>
+									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-lg-5">
+						<div class="img-wrap">
+							<img src="{% static 'images/why-choose-us-img.jpg' %}" alt="Image" class="img-fluid">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Why Choose Us Section --> -->
+
+		<!-- Start We Help Section -->
+		<div class="we-help-section">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-lg-7 mb-5 mb-lg-0">
+						<div class="imgs-grid">
+							<div class="grid grid-1"><img src="{% static 'images/mural.jpg' %}" alt="Untree.co"></div>
+							<div class="grid grid-2"><img src="{% static 'images/fiusac2.jpg' %}" alt="Untree.co"></div>
+							<div class="grid grid-3"><img src="{% static 'images/fiusac4.jpg' %}" alt="Untree.co"></div>
+						</div>
+					</div>
+					<div class="col-lg-5 ps-lg-5">
+						<h2 class="section-title mb-4">Descubre un Mundo de Oportunidades</h2>
+						<p>En nuestra academia, proporcionamos una educación completa centrada en la electrónica. Desde conceptos fundamentales hasta aplicaciones avanzadas, nuestro programa abarca diversas áreas, brindando a los estudiantes la oportunidad de sumergirse en disciplinas que van desde la ingeniería eléctrica hasta la tecnología de la información. Nuestro compromiso con la excelencia académica garantiza que cada estudiante se prepare para un futuro dinámico y lleno de oportunidades en el mundo de la electrónica.</p>
+
+						<ul class="list-unstyled custom-list my-4">
+							<li>Excelencia Educativa</li>
+							<li>Diversidad de Áreas</li>
+							<li>Instalaciones de Vanguardia</li>
+							<li>Compromiso con el Desarrollo</li>
+						</ul>
+						<p><a herf="#" class="btn">Explore</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End We Help Section -->
+
+		<!-- Start Popular Product -->
+		<div class="popular-product">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+						<div class="product-item-sm d-flex">
+							<div class="thumbnail">
+								<img src="{% static 'images/multi.png' %}" alt="Image" class="img-fluid">
+							</div>
+							<div class="pt-3">
+								<h3>Electrónica Básica</h3>
+								<p>Aprende los principios fundamentales y habilidades prácticas para diseñar y analizar circuitos electrónicos introductorios.</p>
+								<p><a href="#">Read More</a></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+						<div class="product-item-sm d-flex">
+							<div class="thumbnail">
+								<img src="{% static 'images/pcb.png' %}" alt="Image" class="img-fluid">
+							</div>
+							<div class="pt-3">
+								<h3>Diseño de PCB</h3>
+								<p>Domina el diseño de Circuitos Impresos (PCBs) desde cero, aplicando conceptos teóricos a proyectos prácticos.</p>
+								<p><a href="#">Read More</a></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+						<div class="product-item-sm d-flex">
+							<div class="thumbnail">
+								<img src="{% static 'images/chip2.png' %}" alt="Image" class="img-fluid">
+							</div>
+							<div class="pt-3">
+								<h3>Electrónica Digital</h3>
+								<p>Explora microcontroladores y sistemas embebidos, desarrollando habilidades avanzadas en electrónica digital a través de proyectos prácticos.</p>
+								<p><a href="#">Read More</a></p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Popular Product -->
+
+		<!-- Start Testimonial Slider -->
+		<div class="testimonial-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 mx-auto text-center">
+						<h2 class="section-title">Comentarios</h2>
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+					<div class="col-lg-12">
+						<div class="testimonial-slider-wrap text-center">
+
+							<div id="testimonial-nav">
+								<span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
+								<span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
+							</div>
+
+							<div class="testimonial-slider">
+								
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;En la Academia USA, he encontrado una educación excepcional. Los profesores son apasionados, las instalaciones son de primera y cada día me desafían a alcanzar nuevas alturas. Estoy agradecido por esta experiencia enriquecedora.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="{% static 'images/person_3.jpg' %}" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Estuardo Martinez</h3>
+													<span class="position d-block mb-3">Estudiante actual</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;Mi tiempo en la Academia USA ha sido verdaderamente transformador. La combinación de profesores expertos, un ambiente de aprendizaje estimulante y recursos de vanguardia ha superado mis expectativas. Cada día me siento más preparado para enfrentar los desafíos académicos y profesionales.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="{% static 'images/person-1.png' %}" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Maria Jones</h3>
+													<span class="position d-block mb-3">Estudiante actual</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;En la Academia USA, he descubierto un espacio donde la excelencia educativa es la norma. Los métodos innovadores de enseñanza y la atención personalizada de los profesores han fortalecido mi comprensión y me han motivado a esforzarme más. Esta academia es un verdadero catalizador para el éxito.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="{% static 'images/person_2.jpg' %}" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Juan Alvarez</h3>
+													<span class="position d-block mb-3">Estudiante actual</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Testimonial Slider -->
+
+		
+
+		{% endblock %}		

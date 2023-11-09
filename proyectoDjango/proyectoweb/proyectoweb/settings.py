@@ -47,8 +47,8 @@ INSTALLED_APPS = [
     'proyectowebapp',
     'catalogo',
     'carro',
+    'pedidos2',
     'autenticacion',
-    'pedidos',
     'crispy_forms',
     "crispy_bootstrap5",
     

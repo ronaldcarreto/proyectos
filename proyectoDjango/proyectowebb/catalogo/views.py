@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from .models import curso
 from carro.carro import Carro
+
 
 
 # Create your views here.
@@ -18,3 +19,16 @@ def cart(request):
    
 
     return render(request, "catalogo/cart.html")
+
+def cursoo(request):
+
+    cursos= curso.objects.all()
+    
+
+    return render(request, "catalogo/curso.html", {"cursos":cursos})
+
+def asignacion(request):
+
+   
+
+   return render(request, "catalogo/asignacion.html")

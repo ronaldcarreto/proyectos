@@ -1,27 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="favicon.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="css/tiny-slider.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+
 <body>
-    
-    Hola {{nombreusuario}}<br/>
-    No. Pedido {{pedido.id}}<br/>
-    <!-- Email del usuario: {{emailusuario}}
-     Lineas de pedido: {{lineas_pedido}}   -->
+
+                    <!-- Start Hero Section                     {% load static %} -->
+                    <div class="hero">
+                        <div class="container"> 
+                            <div class="row justify-content-between">
+                                <div class="col-lg-5">
+                                    <div class="intro-excerpt">
+                                        <h1>Hola {{nombreusuario}}</h1> <br/>
+                                        <h1>CURSOS ASIGNADOS</h1> <br/>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Hero Section -->
 
 
-    <br/>
-    <br/>
-    Lineas de pedido:
-    
-    <ul>
-        {% for linea_pedido in lineas_pedido %}
-            <li>{{ linea_pedido.producto.nombre }}</li>
-        {% endfor %}
-    </ul>
-    
+                    <div class="untree_co-section product-section before-footer-section">
+                        <div class="container">
+                            <div class="row">
+                                {% for linea_pedido in lineas_pedido %}
+                                    <!-- Start Column 4  -->
+                                    <div class="col-12 col-md-4 col-lg-3 mb-5">
+                                        <a class="product-item" href=" ">
+                                            <img src="{{ linea_pedido.producto.imagen }}" class="img-fluid product-thumbnail">
+                                            <h3 class="product-title">{{ linea_pedido.producto.nombre }}</h3>
+                                        </a>
+                                    </div>
+                                    <!-- End Column 4 -->
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <script src="js/bootstrap.bundle.min.js"></script>
+                    <script src="js/tiny-slider.js"></script>
+                    <script src="js/custom.js"></script>
 </body>
 </html>
+

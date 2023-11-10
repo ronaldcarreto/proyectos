@@ -4,11 +4,12 @@ from django.contrib import messages
 #from flask import redirect
 from django.shortcuts import redirect
 from pedidos.models import Pedido, LineaPedido
-from carro.carro import Carro
+
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.core.mail import send_mail
 from catalogo.models import curso
+from carro.carro import Carro
 # Create your views here.
 
 @login_required(login_url="/autenticacion/logear")

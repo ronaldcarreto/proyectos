@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -91,17 +92,32 @@ WSGI_APPLICATION = 'proyectoweb.wsgi.application'
 #}
 
 
+#DATABASES = {
+ #   'default': {
+      
+  
+  #      'ENGINE': 'django.db.backends.postgresql_psycopg2',
+   #     'NAME': 'proyecto2',
+    #    'USER': 'postgres',
+     #   'PASSWORD': '1104',
+      #  'HOST': '127.0.0.1',
+       # 'DATABASE_PORT':'5432'
+    #}
+#}
+
+
 DATABASES = {
     'default': {
       
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'proyecto2',
+        'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': '1104',
-        'HOST': '127.0.0.1',
+        'PASSWORD': '8e851104',
+        'HOST': 'database-1.cwosksl2j5k2.us-east-2.rds.amazonaws.com',
         'DATABASE_PORT':'5432'
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -161,5 +177,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'electroacademy5@gmail.com'
-EMAIL_HOST_PASSWORD = 'bidp mrkl mbus boim'
-EMAIL_SUBJECT_PREFIX = '[ejcm562000@gmail.com]'
+EMAIL_HOST_PASSWORD = '---'
+EMAIL_SUBJECT_PREFIX = ''

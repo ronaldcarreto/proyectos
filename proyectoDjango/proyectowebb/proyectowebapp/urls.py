@@ -1,5 +1,6 @@
 from django.urls import path, include
 from proyectowebapp import views
+
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -12,8 +13,9 @@ urlpatterns = [
     path('catalogo/', include('catalogo.urls')),
 
     
-     path('carro/', include('carro.urls')),
-     path('pedidos/', include('pedidos.urls')),
+    path('carro/', include('carro.urls')),
+    path('pedidos/', include('pedidos.urls')),
+    
 
 ]
 
